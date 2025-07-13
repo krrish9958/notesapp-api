@@ -5,7 +5,7 @@ const Note = require('../models/Note');
 
 
 
-router.get('/list/:userid', async function (req, res) {
+router.get('/list/:userid', async function (req, res){
     //to get all the notes from the database
     var notes = await Note.find({ userid: req.params.userid });
     res.json(notes);
